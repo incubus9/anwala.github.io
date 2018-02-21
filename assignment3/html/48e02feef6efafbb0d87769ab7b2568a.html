@@ -1,0 +1,2186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SportsDB :: Soyez toujours prêt pour les grandes occasions.</title>
+    <meta name="description" content="SportsDB est un système d'alertes qui vous permettra de ne plus manquer vos événements préférés. Ligue 1, Ligue 2, Ligue des Champions, Championnats européens, NBA, NFL, MLB, NHL..."/>
+    <meta name="apple-mobile-web-app-title" content="SportsDB">
+    <meta name="application-name" content="SportsDB">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="Aw2VyochQjDsor_uoITjl0Vf12xTFy6Rz1g3f44tcas" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css?v=1">
+    <link rel="manifest" href="/manifest.json" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9 logo">
+                <img src="/images/icon.png">
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 account">
+                    <a href="/login" class="btn btn-primary">
+        <i class="fa fa-user-o" aria-hidden="true"></i> Connexion
+    </a>
+    <a href="/register/" class="btn btn-success">
+        <i class="fa fa-sign-in" aria-hidden="true"></i> Inscription
+    </a>
+            </div>
+        </div>
+        <hr class="menu-window-limit">
+        <div class="menu">
+            <div class="row">
+                <div class="col-xs-3 col-sm-2 hidden-md hidden-lg ">
+                    <div class="hamburger" data-open="0">
+                        <i class="fa fa-list-ul" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-xs-9 col-sm-10 col-md-12 col-lg-12">
+                    <ul class="nav nav-pills">
+                                                                        <li class="nav hidden-sm hidden-xs">
+                            <a data-toggle="tab" href="#events" data-content="events" class="menu-dynamic">
+                                Événements
+                            </a>
+                        </li>
+                        <li class="nav active">
+                            <a data-toggle="tab" href="#live" data-content="live" class="menu-dynamic">
+                                <div class="live-badge live-animation"></div> En ce moment
+                            </a>
+                        </li>
+                        <li class="nav hidden-sm hidden-xs">
+                            <a data-toggle="tab" href="#schedule" data-content="schedule" class="menu-dynamic">
+                                Agenda
+                            </a>
+                        </li>
+                        <li class="nav hidden-sm hidden-xs">
+                            <a data-toggle="tab" href="#jeux-olympiques" data-content="jeux-olympiques" class="menu-dynamic">
+                                <img src="/images/jo.png">
+                                JO 2018
+                            </a>
+                        </li>
+                        <li role="presentation" class="dropdown nav hidden-sm hidden-xs" data-name="competition">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-content="competition">
+                                Compétitions <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="1.Bundesliga" class="menu-dynamic submenu">
+			1. Bundesliga 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="2.Bundesliga" class="menu-dynamic submenu">
+			2. Bundesliga 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="ChampionsLeague" class="menu-dynamic submenu">
+			Champions League 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="Championship" class="menu-dynamic submenu">
+			Championship 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="DFB-Pokal" class="menu-dynamic submenu">
+			DFB-Pokal 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="Eredivisie" class="menu-dynamic submenu">
+			Eredivisie 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="GrandPrixdeFormule1" class="menu-dynamic submenu">
+			Grand Prix de Formule 1
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="JeuxOlympiques" class="menu-dynamic submenu">
+			Jeux Olympiques 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="LeagueOne" class="menu-dynamic submenu">
+			League One 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="LeagueTwo" class="menu-dynamic submenu">
+			League Two 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="Ligue1" class="menu-dynamic submenu">
+			Ligue 1 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="Ligue2" class="menu-dynamic submenu">
+			Ligue 2 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="MLB-MajorLeagueBaseball" class="menu-dynamic submenu">
+			MLB - Major League Baseball
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="NBA-NationalBasketballAssociation" class="menu-dynamic submenu">
+			NBA - National Basketball Association
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="NFL-NationalFootballLeague" class="menu-dynamic submenu">
+			NFL - National Football League
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="NHL-NationalHockeyLeague" class="menu-dynamic submenu">
+			NHL - National Hockey League
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="PremierLeague" class="menu-dynamic submenu">
+			Premier League 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="PrimeiraLiga" class="menu-dynamic submenu">
+			Primeira Liga 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="PrimeraDivision" class="menu-dynamic submenu">
+			Primera Division 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="SerieA" class="menu-dynamic submenu">
+			Serie A 
+		</a>
+	</li>
+	<li>
+		<a href="#competition" data-toggle="tab" data-content="competition" data-option="SerieB" class="menu-dynamic submenu">
+			Serie B 
+		</a>
+	</li>
+
+ 
+    
+
+                            </ul>
+                        </li>
+                        <li role="presentation" class="dropdown nav hidden-sm hidden-xs" data-name="team">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" data-content="team">
+                                Équipes <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-scroll">
+                                	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="" class="menu-dynamic submenu">
+			
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="1.FCHeidenheim1846" class="menu-dynamic submenu">
+			1. FC Heidenheim 1846
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="1.FCKaiserslautern" class="menu-dynamic submenu">
+			1. FC Kaiserslautern
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="1.FCKöln" class="menu-dynamic submenu">
+			1. FC Köln
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="1.FCNürnberg" class="menu-dynamic submenu">
+			1. FC Nürnberg
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="1.FCUnionBerlin" class="menu-dynamic submenu">
+			1. FC Union Berlin
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="1.FSVMainz05" class="menu-dynamic submenu">
+			1. FSV Mainz 05
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ACCesena" class="menu-dynamic submenu">
+			AC Cesena
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ACChievoVerona" class="menu-dynamic submenu">
+			AC Chievo Verona
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ACMilan" class="menu-dynamic submenu">
+			AC Milan
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AccringtonStanley" class="menu-dynamic submenu">
+			Accrington Stanley
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ACFFiorentina" class="menu-dynamic submenu">
+			ACF Fiorentina
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ADODenHaag" class="menu-dynamic submenu">
+			ADO Den Haag
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AFCBournemouth" class="menu-dynamic submenu">
+			AFC Bournemouth
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AFCWimbledon" class="menu-dynamic submenu">
+			AFC Wimbledon
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AJAuxerre" class="menu-dynamic submenu">
+			AJ Auxerre
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AjaccioAC" class="menu-dynamic submenu">
+			Ajaccio AC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AjaxAmsterdam" class="menu-dynamic submenu">
+			Ajax Amsterdam
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AmiensSC" class="menu-dynamic submenu">
+			Amiens SC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AnaheimDucks" class="menu-dynamic submenu">
+			Anaheim Ducks
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AngersSCO" class="menu-dynamic submenu">
+			Angers SCO
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ArizonaCoyotes" class="menu-dynamic submenu">
+			Arizona Coyotes
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ArizonaDiamondbacks" class="menu-dynamic submenu">
+			Arizona Diamondbacks
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ArminiaBielefeld" class="menu-dynamic submenu">
+			Arminia Bielefeld
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ArsenalFC" class="menu-dynamic submenu">
+			Arsenal FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ASAvellino1912" class="menu-dynamic submenu">
+			AS Avellino 1912
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ASBari" class="menu-dynamic submenu">
+			AS Bari
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ASCittadella" class="menu-dynamic submenu">
+			AS Cittadella
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ASMonacoFC" class="menu-dynamic submenu">
+			AS Monaco FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ASNancy" class="menu-dynamic submenu">
+			AS Nancy
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ASRoma" class="menu-dynamic submenu">
+			AS Roma
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ASSaint-Étienne" class="menu-dynamic submenu">
+			AS Saint-Étienne
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Ascoli" class="menu-dynamic submenu">
+			Ascoli
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AstonVillaFC" class="menu-dynamic submenu">
+			Aston Villa FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AtalantaBC" class="menu-dynamic submenu">
+			Atalanta BC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AthleticClub" class="menu-dynamic submenu">
+			Athletic Club
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AtlantaHawks" class="menu-dynamic submenu">
+			Atlanta Hawks
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="AZAlkmaar" class="menu-dynamic submenu">
+			AZ Alkmaar
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BarnetFC" class="menu-dynamic submenu">
+			Barnet FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BarnsleyFC" class="menu-dynamic submenu">
+			Barnsley FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BayerLeverkusen" class="menu-dynamic submenu">
+			Bayer Leverkusen
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BeneventoCalcio" class="menu-dynamic submenu">
+			Benevento Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BesiktasJK" class="menu-dynamic submenu">
+			Besiktas JK
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BirminghamCity" class="menu-dynamic submenu">
+			Birmingham City
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BlackburnRoversFC" class="menu-dynamic submenu">
+			Blackburn Rovers FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BlackpoolFC" class="menu-dynamic submenu">
+			Blackpool FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BoavistaPortoFC" class="menu-dynamic submenu">
+			Boavista Porto FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BolognaFC" class="menu-dynamic submenu">
+			Bologna FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BoltonWanderersFC" class="menu-dynamic submenu">
+			Bolton Wanderers FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Bor.Mönchengladbach" class="menu-dynamic submenu">
+			Bor. Mönchengladbach
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BorussiaDortmund" class="menu-dynamic submenu">
+			Borussia Dortmund
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BostonBruins" class="menu-dynamic submenu">
+			Boston Bruins
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BostonCeltics" class="menu-dynamic submenu">
+			Boston Celtics
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BostonRedSox" class="menu-dynamic submenu">
+			Boston Red Sox
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BradfordCityAFC" class="menu-dynamic submenu">
+			Bradford City AFC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BrentfordFC" class="menu-dynamic submenu">
+			Brentford FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BresciaCalcio" class="menu-dynamic submenu">
+			Brescia Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Brighton&amp;HoveAlbion" class="menu-dynamic submenu">
+			Brighton &amp; Hove Albion
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BristolCity" class="menu-dynamic submenu">
+			Bristol City
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BristolRovers" class="menu-dynamic submenu">
+			Bristol Rovers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BrooklynNets" class="menu-dynamic submenu">
+			Brooklyn Nets
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BuffaloSabres" class="menu-dynamic submenu">
+			Buffalo Sabres
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BurnleyFC" class="menu-dynamic submenu">
+			Burnley FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BurtonAlbionFC" class="menu-dynamic submenu">
+			Burton Albion FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="BuryFC" class="menu-dynamic submenu">
+			Bury FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="C.F.OsBelenenses" class="menu-dynamic submenu">
+			C.F. Os Belenenses
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CagliariCalcio" class="menu-dynamic submenu">
+			Cagliari Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CalgaryFlames" class="menu-dynamic submenu">
+			Calgary Flames
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CambridgeUnited" class="menu-dynamic submenu">
+			Cambridge United
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CardiffCityFC" class="menu-dynamic submenu">
+			Cardiff City FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CarlisleUnited" class="menu-dynamic submenu">
+			Carlisle United
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CarolinaHurricanes" class="menu-dynamic submenu">
+			Carolina Hurricanes
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CarpiFC" class="menu-dynamic submenu">
+			Carpi FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CDLeganes" class="menu-dynamic submenu">
+			CD Leganes
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CDTondela" class="menu-dynamic submenu">
+			CD Tondela
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ChamoisNiortaisFC" class="menu-dynamic submenu">
+			Chamois Niortais FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CharlotteHornets" class="menu-dynamic submenu">
+			Charlotte Hornets
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CharltonAthletic" class="menu-dynamic submenu">
+			Charlton Athletic
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ChelseaFC" class="menu-dynamic submenu">
+			Chelsea FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CheltenhamTown" class="menu-dynamic submenu">
+			Cheltenham Town
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ChesterfieldFC" class="menu-dynamic submenu">
+			Chesterfield FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ChicagoBlackhawks" class="menu-dynamic submenu">
+			Chicago Blackhawks
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ChicagoBulls" class="menu-dynamic submenu">
+			Chicago Bulls
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ChicagoCubs" class="menu-dynamic submenu">
+			Chicago Cubs
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ClermontFootAuvergne" class="menu-dynamic submenu">
+			Clermont Foot Auvergne
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ClevelandCavaliers" class="menu-dynamic submenu">
+			Cleveland Cavaliers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ClevelandIndians" class="menu-dynamic submenu">
+			Cleveland Indians
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ClubAtléticodeMadrid" class="menu-dynamic submenu">
+			Club Atlético de Madrid
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ColchesterUnitedFC" class="menu-dynamic submenu">
+			Colchester United FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ColoradoAvalanche" class="menu-dynamic submenu">
+			Colorado Avalanche
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ColumbusBlueJackets" class="menu-dynamic submenu">
+			Columbus Blue Jackets
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CoventryCityFC" class="menu-dynamic submenu">
+			Coventry City FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CrawleyTown" class="menu-dynamic submenu">
+			Crawley Town
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Cremonese" class="menu-dynamic submenu">
+			Cremonese
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CreweAlexandraFC" class="menu-dynamic submenu">
+			Crewe Alexandra FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="CrystalPalaceFC" class="menu-dynamic submenu">
+			Crystal Palace FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DallasMavericks" class="menu-dynamic submenu">
+			Dallas Mavericks
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DallasStars" class="menu-dynamic submenu">
+			Dallas Stars
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DenverNuggets" class="menu-dynamic submenu">
+			Denver Nuggets
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DeportivoAlavés" class="menu-dynamic submenu">
+			Deportivo Alavés
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DerbyCounty" class="menu-dynamic submenu">
+			Derby County
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DesportivoAves" class="menu-dynamic submenu">
+			Desportivo Aves
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DetroitPistons" class="menu-dynamic submenu">
+			Detroit Pistons
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DetroitRedWings" class="menu-dynamic submenu">
+			Detroit Red Wings
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DijonFCO" class="menu-dynamic submenu">
+			Dijon FCO
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DoncasterRoversFC" class="menu-dynamic submenu">
+			Doncaster Rovers FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="DynamoDresden" class="menu-dynamic submenu">
+			Dynamo Dresden
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="EAGuingamp" class="menu-dynamic submenu">
+			EA Guingamp
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="EdmontonOilers" class="menu-dynamic submenu">
+			Edmonton Oilers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="EintrachtBraunschweig" class="menu-dynamic submenu">
+			Eintracht Braunschweig
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="EintrachtFrankfurt" class="menu-dynamic submenu">
+			Eintracht Frankfurt
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="EmpoliFC" class="menu-dynamic submenu">
+			Empoli FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ErzgebirgeAue" class="menu-dynamic submenu">
+			Erzgebirge Aue
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ESTroyesAC" class="menu-dynamic submenu">
+			ES Troyes AC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="EvertonFC" class="menu-dynamic submenu">
+			Everton FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Excelsior" class="menu-dynamic submenu">
+			Excelsior
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ExeterCity" class="menu-dynamic submenu">
+			Exeter City
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCAugsburg" class="menu-dynamic submenu">
+			FC Augsburg
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCBarcelona" class="menu-dynamic submenu">
+			FC Barcelona
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCBasel" class="menu-dynamic submenu">
+			FC Basel
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCBayernMünchen" class="menu-dynamic submenu">
+			FC Bayern München
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCBourg-en-BressePéronnas" class="menu-dynamic submenu">
+			FC Bourg-en-Bresse Péronnas
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCCrotone" class="menu-dynamic submenu">
+			FC Crotone
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCGirondinsdeBordeaux" class="menu-dynamic submenu">
+			FC Girondins de Bordeaux
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCGroningen" class="menu-dynamic submenu">
+			FC Groningen
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCIngolstadt04" class="menu-dynamic submenu">
+			FC Ingolstadt 04
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCInternazionaleMilano" class="menu-dynamic submenu">
+			FC Internazionale Milano
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCLorient" class="menu-dynamic submenu">
+			FC Lorient
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCMetz" class="menu-dynamic submenu">
+			FC Metz
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCNantes" class="menu-dynamic submenu">
+			FC Nantes
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCPaçosdeFerreira" class="menu-dynamic submenu">
+			FC Paços de Ferreira
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCPorto" class="menu-dynamic submenu">
+			FC Porto
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCRioAve" class="menu-dynamic submenu">
+			FC Rio Ave
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCSchalke04" class="menu-dynamic submenu">
+			FC Schalke 04
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCSt.Pauli" class="menu-dynamic submenu">
+			FC St. Pauli
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCTwenteEnschede" class="menu-dynamic submenu">
+			FC Twente Enschede
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCUtrecht" class="menu-dynamic submenu">
+			FC Utrecht
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FCValenciennes" class="menu-dynamic submenu">
+			FC Valenciennes
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Feirense" class="menu-dynamic submenu">
+			Feirense
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FeyenoordRotterdam" class="menu-dynamic submenu">
+			Feyenoord Rotterdam
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FleetwoodTownFC" class="menu-dynamic submenu">
+			Fleetwood Town FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FloridaPanthers" class="menu-dynamic submenu">
+			Florida Panthers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Foggia" class="menu-dynamic submenu">
+			Foggia
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ForestGreenRovers" class="menu-dynamic submenu">
+			Forest Green Rovers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FortunaDüsseldorf" class="menu-dynamic submenu">
+			Fortuna Düsseldorf
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FrosinoneCalcio" class="menu-dynamic submenu">
+			Frosinone Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="FulhamFC" class="menu-dynamic submenu">
+			Fulham FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="G.D.Chaves" class="menu-dynamic submenu">
+			G.D. Chaves
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="GazélecAjaccio" class="menu-dynamic submenu">
+			Gazélec Ajaccio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="GDEstorilPraia" class="menu-dynamic submenu">
+			GD Estoril Praia
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="GenoaCFC" class="menu-dynamic submenu">
+			Genoa CFC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="GetafeCF" class="menu-dynamic submenu">
+			Getafe CF
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="GillinghamFC" class="menu-dynamic submenu">
+			Gillingham FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="GironaFC" class="menu-dynamic submenu">
+			Girona FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="GoldenStateWarriors" class="menu-dynamic submenu">
+			Golden State Warriors
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="GrimsbyTown" class="menu-dynamic submenu">
+			Grimsby Town
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="HamburgerSV" class="menu-dynamic submenu">
+			Hamburger SV
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Hannover96" class="menu-dynamic submenu">
+			Hannover 96
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="HellasVeronaFC" class="menu-dynamic submenu">
+			Hellas Verona FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="HeraclesAlmelo" class="menu-dynamic submenu">
+			Heracles Almelo
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="HerthaBSC" class="menu-dynamic submenu">
+			Hertha BSC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="HolsteinKiel" class="menu-dynamic submenu">
+			Holstein Kiel
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="HoustonAstros" class="menu-dynamic submenu">
+			Houston Astros
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="HoustonRockets" class="menu-dynamic submenu">
+			Houston Rockets
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="HuddersfieldTown" class="menu-dynamic submenu">
+			Huddersfield Town
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="HullCityFC" class="menu-dynamic submenu">
+			Hull City FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="IndianaPacers" class="menu-dynamic submenu">
+			Indiana Pacers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="IpswichTown" class="menu-dynamic submenu">
+			Ipswich Town
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="JacksonvilleJaguars" class="menu-dynamic submenu">
+			Jacksonville Jaguars
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="JahnRegensburg" class="menu-dynamic submenu">
+			Jahn Regensburg
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="JuventusTurin" class="menu-dynamic submenu">
+			Juventus Turin
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="KansasCityChiefs" class="menu-dynamic submenu">
+			Kansas City Chiefs
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LBChâteauroux" class="menu-dynamic submenu">
+			LB Châteauroux
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LeHavreAC" class="menu-dynamic submenu">
+			Le Havre AC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LeedsUnited" class="menu-dynamic submenu">
+			Leeds United
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LeicesterCityFC" class="menu-dynamic submenu">
+			Leicester City FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LevanteUD" class="menu-dynamic submenu">
+			Levante UD
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LincolnCity" class="menu-dynamic submenu">
+			Lincoln City
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LiverpoolFC" class="menu-dynamic submenu">
+			Liverpool FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LosAngelesClippers" class="menu-dynamic submenu">
+			Los Angeles Clippers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LosAngelesDodgers" class="menu-dynamic submenu">
+			Los Angeles Dodgers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LosAngelesKings" class="menu-dynamic submenu">
+			Los Angeles Kings
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LosAngelesLakers" class="menu-dynamic submenu">
+			Los Angeles Lakers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LosAngelesRams" class="menu-dynamic submenu">
+			Los Angeles Rams
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="LutonTown" class="menu-dynamic submenu">
+			Luton Town
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MálagaCF" class="menu-dynamic submenu">
+			Málaga CF
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ManchesterCityFC" class="menu-dynamic submenu">
+			Manchester City FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ManchesterUnitedFC" class="menu-dynamic submenu">
+			Manchester United FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MansfieldTown" class="menu-dynamic submenu">
+			Mansfield Town
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MaritimoFunchal" class="menu-dynamic submenu">
+			Maritimo Funchal
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MemphisGrizzlies" class="menu-dynamic submenu">
+			Memphis Grizzlies
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MiamiHeat" class="menu-dynamic submenu">
+			Miami Heat
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MiddlesbroughFC" class="menu-dynamic submenu">
+			Middlesbrough FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MillwallFC" class="menu-dynamic submenu">
+			Millwall FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MiltonKeynesDons" class="menu-dynamic submenu">
+			Milton Keynes Dons
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MilwaukeeBucks" class="menu-dynamic submenu">
+			Milwaukee Bucks
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MinnesotaTimberwolves" class="menu-dynamic submenu">
+			Minnesota Timberwolves
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MinnesotaVikings" class="menu-dynamic submenu">
+			Minnesota Vikings
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MinnesotaWild" class="menu-dynamic submenu">
+			Minnesota Wild
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MontpellierHéraultSC" class="menu-dynamic submenu">
+			Montpellier Hérault SC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MontrealCanadiens" class="menu-dynamic submenu">
+			Montreal Canadiens
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MorecambeFC" class="menu-dynamic submenu">
+			Morecambe FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MoreirenseFC" class="menu-dynamic submenu">
+			Moreirense FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="MSVDuisburg" class="menu-dynamic submenu">
+			MSV Duisburg
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NACBreda" class="menu-dynamic submenu">
+			NAC Breda
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NashvillePredators" class="menu-dynamic submenu">
+			Nashville Predators
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NewEnglandPatriots" class="menu-dynamic submenu">
+			New England Patriots
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NewJerseyDevils" class="menu-dynamic submenu">
+			New Jersey Devils
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NewOrleansPelicans" class="menu-dynamic submenu">
+			New Orleans Pelicans
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NewOrleansSaints" class="menu-dynamic submenu">
+			New Orleans Saints
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NewYorkIslanders" class="menu-dynamic submenu">
+			New York Islanders
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NewYorkKnicks" class="menu-dynamic submenu">
+			New York Knicks
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NewYorkRangers" class="menu-dynamic submenu">
+			New York Rangers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NewYorkYankees" class="menu-dynamic submenu">
+			New York Yankees
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NewcastleUnitedFC" class="menu-dynamic submenu">
+			Newcastle United FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NewportCounty" class="menu-dynamic submenu">
+			Newport County
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NîmesOlympique" class="menu-dynamic submenu">
+			Nîmes Olympique
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NorthamptonTown" class="menu-dynamic submenu">
+			Northampton Town
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NorwichCityFC" class="menu-dynamic submenu">
+			Norwich City FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NottinghamForest" class="menu-dynamic submenu">
+			Nottingham Forest
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NottsCounty" class="menu-dynamic submenu">
+			Notts County
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="NovaraCalcio" class="menu-dynamic submenu">
+			Novara Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="OGCNice" class="menu-dynamic submenu">
+			OGC Nice
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="OklahomaCityThunder" class="menu-dynamic submenu">
+			Oklahoma City Thunder
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="OldhamAthleticAFC" class="menu-dynamic submenu">
+			Oldham Athletic AFC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="OlympiquedeMarseille" class="menu-dynamic submenu">
+			Olympique de Marseille
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="OlympiqueLyonnais" class="menu-dynamic submenu">
+			Olympique Lyonnais
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="OrlandoMagic" class="menu-dynamic submenu">
+			Orlando Magic
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="OSCLille" class="menu-dynamic submenu">
+			OSC Lille
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="OttawaSenators" class="menu-dynamic submenu">
+			Ottawa Senators
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="OxfordUnited" class="menu-dynamic submenu">
+			Oxford United
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ParisFC" class="menu-dynamic submenu">
+			Paris FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ParisSaint-Germain" class="menu-dynamic submenu">
+			Paris Saint-Germain
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ParmaFC" class="menu-dynamic submenu">
+			Parma FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PECZwolle" class="menu-dynamic submenu">
+			PEC Zwolle
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Perugia" class="menu-dynamic submenu">
+			Perugia
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PescaraCalcio" class="menu-dynamic submenu">
+			Pescara Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PeterboroughUnitedFC" class="menu-dynamic submenu">
+			Peterborough United FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Philadelphia76ers" class="menu-dynamic submenu">
+			Philadelphia 76ers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PhiladelphiaEagles" class="menu-dynamic submenu">
+			Philadelphia Eagles
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PhiladelphiaFlyers" class="menu-dynamic submenu">
+			Philadelphia Flyers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PhoenixSuns" class="menu-dynamic submenu">
+			Phoenix Suns
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PittsburghPenguins" class="menu-dynamic submenu">
+			Pittsburgh Penguins
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PittsburghSteelers" class="menu-dynamic submenu">
+			Pittsburgh Steelers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PlymouthArgyle" class="menu-dynamic submenu">
+			Plymouth Argyle
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PortValeFC" class="menu-dynamic submenu">
+			Port Vale FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PortimonenseS.C." class="menu-dynamic submenu">
+			Portimonense S.C.
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PortlandTrailBlazers" class="menu-dynamic submenu">
+			Portland Trail Blazers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Portsmouth" class="menu-dynamic submenu">
+			Portsmouth
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PrestonNorthEnd" class="menu-dynamic submenu">
+			Preston North End
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ProVercelli" class="menu-dynamic submenu">
+			Pro Vercelli
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="PSVEindhoven" class="menu-dynamic submenu">
+			PSV Eindhoven
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="QueensParkRangers" class="menu-dynamic submenu">
+			Queens Park Rangers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="QuevillyRouen" class="menu-dynamic submenu">
+			Quevilly Rouen
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RCCeltadeVigo" class="menu-dynamic submenu">
+			RC Celta de Vigo
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RCDeportivoLaCoruna" class="menu-dynamic submenu">
+			RC Deportivo La Coruna
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RCLens" class="menu-dynamic submenu">
+			RC Lens
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RCStrasbourgAlsace" class="menu-dynamic submenu">
+			RC Strasbourg Alsace
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RCTours" class="menu-dynamic submenu">
+			RC Tours
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RCDEspanyol" class="menu-dynamic submenu">
+			RCD Espanyol
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Reading" class="menu-dynamic submenu">
+			Reading
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RealBetis" class="menu-dynamic submenu">
+			Real Betis
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RealMadridCF" class="menu-dynamic submenu">
+			Real Madrid CF
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RealSociedaddeFútbol" class="menu-dynamic submenu">
+			Real Sociedad de Fútbol
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RedBullLeipzig" class="menu-dynamic submenu">
+			Red Bull Leipzig
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RochdaleAFC" class="menu-dynamic submenu">
+			Rochdale AFC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RodaJCKerkrade" class="menu-dynamic submenu">
+			Roda JC Kerkrade
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="RotherhamUnited" class="menu-dynamic submenu">
+			Rotherham United
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SacramentoKings" class="menu-dynamic submenu">
+			Sacramento Kings
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SalernitanaCalcio" class="menu-dynamic submenu">
+			Salernitana Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SanAntonioSpurs" class="menu-dynamic submenu">
+			San Antonio Spurs
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SanJoseSharks" class="menu-dynamic submenu">
+			San Jose Sharks
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SCFreiburg" class="menu-dynamic submenu">
+			SC Freiburg
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SCHeerenveen" class="menu-dynamic submenu">
+			SC Heerenveen
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SCPaderborn07" class="menu-dynamic submenu">
+			SC Paderborn 07
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ScunthorpeUnitedFC" class="menu-dynamic submenu">
+			Scunthorpe United FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SDEibar" class="menu-dynamic submenu">
+			SD Eibar
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SevillaFC" class="menu-dynamic submenu">
+			Sevilla FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ShakhtarDonetsk" class="menu-dynamic submenu">
+			Shakhtar Donetsk
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SheffieldUnitedFC" class="menu-dynamic submenu">
+			Sheffield United FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SheffieldWednesday" class="menu-dynamic submenu">
+			Sheffield Wednesday
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ShrewsburyTownFC" class="menu-dynamic submenu">
+			Shrewsbury Town FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SLBenfica" class="menu-dynamic submenu">
+			SL Benfica
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SMCaen" class="menu-dynamic submenu">
+			SM Caen
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SochauxFC" class="menu-dynamic submenu">
+			Sochaux FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SouthamptonFC" class="menu-dynamic submenu">
+			Southampton FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SouthendUnitedFC" class="menu-dynamic submenu">
+			Southend United FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SPALFerrara" class="menu-dynamic submenu">
+			SPAL Ferrara
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SpartaRotterdam" class="menu-dynamic submenu">
+			Sparta Rotterdam
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SpeziaCalcio" class="menu-dynamic submenu">
+			Spezia Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SportingBraga" class="menu-dynamic submenu">
+			Sporting Braga
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SportingCP" class="menu-dynamic submenu">
+			Sporting CP
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SpVggGreutherFürth" class="menu-dynamic submenu">
+			SpVgg Greuther Fürth
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SSLazio" class="menu-dynamic submenu">
+			SS Lazio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SSCNapoli" class="menu-dynamic submenu">
+			SSC Napoli
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="St.LouisBlues" class="menu-dynamic submenu">
+			St. Louis Blues
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="StadeBrestois" class="menu-dynamic submenu">
+			Stade Brestois
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="StadedeReims" class="menu-dynamic submenu">
+			Stade de Reims
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="StadeRennaisFC" class="menu-dynamic submenu">
+			Stade Rennais FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="StevenageFC" class="menu-dynamic submenu">
+			Stevenage FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="StokeCityFC" class="menu-dynamic submenu">
+			Stoke City FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SunderlandAFC" class="menu-dynamic submenu">
+			Sunderland AFC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SVDarmstadt98" class="menu-dynamic submenu">
+			SV Darmstadt 98
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SVSandhausen" class="menu-dynamic submenu">
+			SV Sandhausen
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SwanseaCityFC" class="menu-dynamic submenu">
+			Swansea City FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="SwindonTownFC" class="menu-dynamic submenu">
+			Swindon Town FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="TampaBayLightning" class="menu-dynamic submenu">
+			Tampa Bay Lightning
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="TernanaCalcio" class="menu-dynamic submenu">
+			Ternana Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="TorinoFC" class="menu-dynamic submenu">
+			Torino FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="TorontoMapleLeafs" class="menu-dynamic submenu">
+			Toronto Maple Leafs
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="TorontoRaptors" class="menu-dynamic submenu">
+			Toronto Raptors
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="TottenhamHotspurFC" class="menu-dynamic submenu">
+			Tottenham Hotspur FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ToulouseFC" class="menu-dynamic submenu">
+			Toulouse FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="TSG1899Hoffenheim" class="menu-dynamic submenu">
+			TSG 1899 Hoffenheim
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="UCSampdoria" class="menu-dynamic submenu">
+			UC Sampdoria
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="UDLasPalmas" class="menu-dynamic submenu">
+			UD Las Palmas
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="UdineseCalcio" class="menu-dynamic submenu">
+			Udinese Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="USCittádiPalermo" class="menu-dynamic submenu">
+			US Cittá di Palermo
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="USOrleans" class="menu-dynamic submenu">
+			US Orleans
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="USSassuoloCalcio" class="menu-dynamic submenu">
+			US Sassuolo Calcio
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="UtahJazz" class="menu-dynamic submenu">
+			Utah Jazz
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="ValenciaCF" class="menu-dynamic submenu">
+			Valencia CF
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VancouverCanucks" class="menu-dynamic submenu">
+			Vancouver Canucks
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VegasGoldenKnights" class="menu-dynamic submenu">
+			Vegas Golden Knights
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="Venezia" class="menu-dynamic submenu">
+			Venezia
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VfBStuttgart" class="menu-dynamic submenu">
+			VfB Stuttgart
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VfLBochum" class="menu-dynamic submenu">
+			VfL Bochum
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VfLWolfsburg" class="menu-dynamic submenu">
+			VfL Wolfsburg
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VillarrealCF" class="menu-dynamic submenu">
+			Villarreal CF
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VirtusEntella" class="menu-dynamic submenu">
+			Virtus Entella
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VitesseArnhem" class="menu-dynamic submenu">
+			Vitesse Arnhem
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VitoriaGuimaraes" class="menu-dynamic submenu">
+			Vitoria Guimaraes
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VitoriaSetubal" class="menu-dynamic submenu">
+			Vitoria Setubal
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="VVVVenlo" class="menu-dynamic submenu">
+			VVV Venlo
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WalsallFC" class="menu-dynamic submenu">
+			Walsall FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WashingtonCapitals" class="menu-dynamic submenu">
+			Washington Capitals
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WashingtonNationals" class="menu-dynamic submenu">
+			Washington Nationals
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WashingtonWizards" class="menu-dynamic submenu">
+			Washington Wizards
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WatfordFC" class="menu-dynamic submenu">
+			Watford FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WerderBremen" class="menu-dynamic submenu">
+			Werder Bremen
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WestBromwichAlbionFC" class="menu-dynamic submenu">
+			West Bromwich Albion FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WestHamUnitedFC" class="menu-dynamic submenu">
+			West Ham United FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WiganAthleticFC" class="menu-dynamic submenu">
+			Wigan Athletic FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WillemIITilburg" class="menu-dynamic submenu">
+			Willem II Tilburg
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WinnipegJets" class="menu-dynamic submenu">
+			Winnipeg Jets
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WolverhamptonWanderersFC" class="menu-dynamic submenu">
+			Wolverhampton Wanderers FC
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="WycombeWanderers" class="menu-dynamic submenu">
+			Wycombe Wanderers
+		</a>
+	</li>
+	<li>
+		<a href="#teams" data-toggle="tab" data-content="team" data-option="YeovilTown" class="menu-dynamic submenu">
+			Yeovil Town
+		</a>
+	</li>
+
+ 
+    
+
+                            </ul>
+                        </li>
+                        <li class="nav hidden-sm hidden-xs">
+                            <a data-toggle="tab" href="#search" data-content="search" class="menu-dynamic">
+                                Recherche
+                            </a>
+                        </li>
+                        </ul>
+                </div>
+                            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+                <div class="tab-content">
+                    	    	<h3 class="hidden-xs hidden-sm"><div class="live-badge"></div> En ce moment</h3>
+
+    <div class="event match_action  menu-dynamic " data-id="4983" data-action="add" data-content="alerts" >
+            <div class="background-category">
+                            <img src="/images/event-jeuxolympiques2018.jpg">
+                    </div>
+            <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        <div class="event-label">
+                                    Descente (F)
+                            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                            <img class="icon-sport" src="/images/icon-skialpin.png">
+                        Ski alpin<br />
+                            <img class="icon-sport" src="/images/jo.png">
+                        <a data-content="competition" data-option="JeuxOlympiques" class="menu-dynamic submenu stop-propagation">
+                Jeux Olympiques 
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" >
+                                                                                                                                                                    <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="98.333333333333" aria-valuemin="0" aria-valuemax="100" style="width: 98.333333333333%">
+                        <span class="sr-only">98.333333333333% Complete</span>
+                    </div>
+                </div>
+                                        <div><i class="fa fa-map-marker" aria-hidden="true"></i> Corée du Sud</div>
+                    </div>
+    </div>
+</div>
+    <div class="event match_action  menu-dynamic " data-id="4518" data-action="add" data-content="alerts" >
+            <div class="background-category">
+                            <img src="/images/event-hockeysurglace.jpg">
+                    </div>
+            <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        <div class="event-label">
+                                    <a data-content="team" data-option="EdmontonOilers" class="menu-dynamic submenu stop-propagation">
+                        Edmonton Oilers
+                    </a>
+                    <span class="vs">VS</span>
+                    <a data-content="team" data-option="BostonBruins" class="menu-dynamic submenu stop-propagation">
+                        Boston Bruins
+                    </a>
+                            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                            <img class="icon-sport" src="/images/icon-hockeysurglace.png">
+                        Hockey sur glace<br />
+                            <i class="fa fa-trophy" aria-hidden="true"></i>
+                        <a data-content="competition" data-option="NHL-NationalHockeyLeague" class="menu-dynamic submenu stop-propagation">
+                NHL - National Hockey League
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" >
+                                                                                                                                                                    <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="98.333333333333" aria-valuemin="0" aria-valuemax="100" style="width: 98.333333333333%">
+                        <span class="sr-only">98.333333333333% Complete</span>
+                    </div>
+                </div>
+                                        <div><i class="fa fa-map-marker" aria-hidden="true"></i> Rogers Place</div>
+                    </div>
+    </div>
+</div>
+    <div class="event match_action  menu-dynamic " data-id="4519" data-action="add" data-content="alerts" >
+            <div class="background-category">
+                            <img src="/images/event-hockeysurglace.jpg">
+                    </div>
+            <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        <div class="event-label">
+                                    <a data-content="team" data-option="VancouverCanucks" class="menu-dynamic submenu stop-propagation">
+                        Vancouver Canucks
+                    </a>
+                    <span class="vs">VS</span>
+                    <a data-content="team" data-option="ColoradoAvalanche" class="menu-dynamic submenu stop-propagation">
+                        Colorado Avalanche
+                    </a>
+                            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                            <img class="icon-sport" src="/images/icon-hockeysurglace.png">
+                        Hockey sur glace<br />
+                            <i class="fa fa-trophy" aria-hidden="true"></i>
+                        <a data-content="competition" data-option="NHL-NationalHockeyLeague" class="menu-dynamic submenu stop-propagation">
+                NHL - National Hockey League
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" >
+                                                                                                                                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="48.333333333333" aria-valuemin="0" aria-valuemax="100" style="width: 48.333333333333%">
+                        <span class="sr-only">48.333333333333% Complete</span>
+                    </div>
+                </div>
+                                        <div><i class="fa fa-map-marker" aria-hidden="true"></i> Rogers Arena</div>
+                    </div>
+    </div>
+</div>
+
+<h3>À venir</h3>
+
+    <div class="event match_action  menu-dynamic " data-id="4984" data-action="add" data-content="alerts" >
+            <div class="background-category">
+                            <img src="/images/event-jeuxolympiques2018.jpg">
+                    </div>
+            <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        <div class="event-label">
+                                    Ski cross (H)
+                            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                            <img class="icon-sport" src="/images/icon-skifreestyle.png">
+                        Ski freestyle<br />
+                            <img class="icon-sport" src="/images/jo.png">
+                        <a data-content="competition" data-option="JeuxOlympiques" class="menu-dynamic submenu stop-propagation">
+                Jeux Olympiques 
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" >
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                aujourd'hui
+                 à 05h15
+                                        <div><i class="fa fa-map-marker" aria-hidden="true"></i> Corée du Sud</div>
+                    </div>
+    </div>
+</div>
+    <div class="event match_action  menu-dynamic " data-id="4985" data-action="add" data-content="alerts" >
+            <div class="background-category">
+                            <img src="/images/event-jeuxolympiques2018.jpg">
+                    </div>
+            <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        <div class="event-label">
+                                    Sprint par équipes (H et F)
+                            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                            <img class="icon-sport" src="/images/icon-skidefond.png">
+                        Ski de fond<br />
+                            <img class="icon-sport" src="/images/jo.png">
+                        <a data-content="competition" data-option="JeuxOlympiques" class="menu-dynamic submenu stop-propagation">
+                Jeux Olympiques 
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" >
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                aujourd'hui
+                 à 09h00
+                                        <div><i class="fa fa-map-marker" aria-hidden="true"></i> Corée du Sud</div>
+                    </div>
+    </div>
+</div>
+    <div class="event match_action  menu-dynamic " data-id="4986" data-action="add" data-content="alerts" >
+            <div class="background-category">
+                            <img src="/images/event-jeuxolympiques2018.jpg">
+                    </div>
+            <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        <div class="event-label">
+                                    Poursuite par équipes (H et F)
+                            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                            <img class="icon-sport" src="/images/icon-patinagedevitesse.png">
+                        Patinage de vitesse<br />
+                            <img class="icon-sport" src="/images/jo.png">
+                        <a data-content="competition" data-option="JeuxOlympiques" class="menu-dynamic submenu stop-propagation">
+                Jeux Olympiques 
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" >
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                aujourd'hui
+                 à 12h00
+                                        <div><i class="fa fa-map-marker" aria-hidden="true"></i> Corée du Sud</div>
+                    </div>
+    </div>
+</div>
+    <div class="event match_action  menu-dynamic " data-id="4987" data-action="add" data-content="alerts" >
+            <div class="background-category">
+                            <img src="/images/event-jeuxolympiques2018.jpg">
+                    </div>
+            <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                            <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        <div class="event-label">
+                                    Bob à deux (F) 
+                            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                            <img class="icon-sport" src="/images/icon-bobsleigh.png">
+                        Bobsleigh<br />
+                            <img class="icon-sport" src="/images/jo.png">
+                        <a data-content="competition" data-option="JeuxOlympiques" class="menu-dynamic submenu stop-propagation">
+                Jeux Olympiques 
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3" >
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                aujourd'hui
+                 à 12h40
+                                        <div><i class="fa fa-map-marker" aria-hidden="true"></i> Corée du Sud</div>
+                    </div>
+    </div>
+</div>
+
+	                </div>
+                <div class="progress loading">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript">var oneSignalAppId = "b3123ad3-5852-48a3-94ba-c7257dcf9135"</script>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112999282-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-112999282-1');
+    </script>
+</body>
+</html>

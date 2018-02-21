@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+<head>
+	<title></title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- Schema.org for Google+ //-->
+	<meta itemprop="name" content="">
+	<meta itemprop="image" content="http://d31wsou9chh9ss.cloudfront.net/0/mobile/images/1512596543/14522/300/200/PlayerLogo.jpg">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="">
+	<meta name="twitter:image:src" content="http://d31wsou9chh9ss.cloudfront.net/0/mobile/images/1512596543/14522/300/200/PlayerLogo.jpg">
+
+	<!-- Open Graph (Facebook) -->
+	<meta property="og:title" content=""/>
+	<meta property="og:type" content="music.radio_station"/>
+		<meta property="og:site_name" content="KDLM"/>
+	<meta property="og:url" content="http://v6.player.abacast.net/6755"/>
+	<meta property="fb:app_id" content="142428785927889"/>
+
+	<!-- Stylesheets //-->
+	<link rel="stylesheet" href="/assets/style/css/style.css?cb=49">
+	<link rel="stylesheet" href="/assets/style/patch.css?cb=49">
+	<link rel="stylesheet" media="(max-width: 768px)" href="/assets/style/css/portrait-style-768.css?cb=49">
+	<link rel="stylesheet" href="//vjs.zencdn.net/4.6/video-js.css?cb=49">
+
+	<!-- Other Resources //-->
+	<link rel='apple-touch-icon' href="/assets/images/apple-touch-icon.png"/>
+
+	<!-- Scripts: Check and handle browser capabilities //-->
+	<script type='text/javascript'>
+		"use strict";
+
+		// Moved from the abacastPlayer.js file to here
+		if (typeof String.prototype.trim !== 'function') {
+			window.location.href = '/unsupported.php';
+		}
+
+		// Proxy the console command if it does not exist (to prevent errors)
+		if (!window.console) {
+			window.console = {
+				log   : function () {},
+				trace : function () {},
+				error : function () {},
+				warn  : function () {}
+			};
+		}
+	</script>
+
+	<!-- Scripts: Vendor //-->
+			<script src="//imasdk.googleapis.com/js/sdkloader/ima3.js?cb=49"></script>
+		<script src="/assets/js/vendor/basil/basil-0.4.2.min.js?cb=49"></script>
+		<script src="/assets/js/vendor/fingerprintjs2/fingerprint2-0.9.0.min.js?cb=49"></script>
+		<script src="/assets/js/vendor/xml2json/xml2json.min.js?cb=49"></script>
+		<script src='//cdn.pubnub.com/pubnub-3.12.0.min.js?cb=49'></script>
+	
+	<script src="/assets/js/jquery-1.10.2.min.js?cb=49"></script>
+	<script src="/assets/js/jquery.mobile-1.4.2.min.js?cb=49"></script>
+	<script src='/assets/js/color-analyze.js?cb=49'></script>
+	<script src='/assets/js/json3.js?cb=49'></script>
+	<script src='/assets/js/jquery.nouislider.js?cb=49'></script>
+	<script src="/assets/js/swfobject/swfobject.js?cb=49"></script>
+	<script src="/assets/js/jquery.swfobject.1-1-1.min.js?cb=49"></script>
+	<script src="/assets/js/queryselector.polyfill.js?cb=49"></script>
+	<script src="/assets/js/video.js?cb=49"></script>
+
+	<!-- Scripts: Player Application Bootstrap //-->
+	<script src="/assets/js/player-bootstrap.js?cb=49"></script>
+
+	<!-- Scripts: Radio Player Components //-->
+	<script src="/assets/js/abaRadio.core.js?cb=49"></script>
+	<script src="/assets/js/abaRadio.consts.js?cb=49"></script>
+	<script src="/assets/js/abaRadio.util.js?cb=49"></script>
+	<script src="/assets/js/abaRadio.events.js?cb=49"></script>
+	<script src="/assets/js/abaRadio.eventSystem.js?cb=49"></script>
+	<script src="/assets/js/abaRadio.deviceDetection.js?cb=49"></script>
+	<script src="/assets/js/abaRadio.featureDetection.js?cb=49"></script>
+	<script src="/assets/js/abaRadio.mediaController.js?cb=49"></script>
+	<script src="/assets/js/abaRadio.modernizr.js?cb=49"></script>
+	<script src="/assets/js/abaRadio.playlist.js?cb=49"></script>
+
+	<!-- Scripts: Player Application Components //-->
+	<script src="/assets/js/abacastPlayer.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.ajax.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.banner.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.dialogManager.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.presslaff.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.events.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.newsfeed.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.media.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.media.metadata.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.podcastlist.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.playlist.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.stations.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.menu.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.menuItem.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.util.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.ui.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.roviHandle.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.track.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.social.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.template.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.gateway.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.vast.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.vpaid.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.deviceIdentification.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.a2xSync.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.adMetaUserMatching.js?cb=49"></script>
+	<script src="/assets/js/abacastPlayer.pubnubSideband.js?cb=49"></script>
+<script type="text/html" id="tmpl_section_builder" class="template">
+	<div class="hero-table">
+		<div class="row">
+			<@ for (var ii=0; ii< items.length; ii++) {
+			if('nowPlaying' == items[ii].type){ continue;} @>
+			<div class="cell <@= items[ii].size.replace(' ', '-').toLowerCase() @>">
+				<div class='height-sizer'>
+					<section name="<@=abacastPlayer.util.cleanId(items[ii].uniqueid)@>" id="<@=abacastPlayer.util.cleanId(items[ii].uniqueid)@>" data-type="<@=items[ii].type@>">
+						<div class="section-header">
+							<h2><@= items[ii].name @><span class="back-to-live-nav"><img src="/assets/images/back-up.png"/></span>
+							</h2>
+						</div>
+						<div class="cell-inner">
+							<@= items[ii].renderSection() @>
+						</div>
+					</section>
+				</div>
+			</div>
+			<@ } @>
+		</div>
+	</div>
+</script>
+
+<script type="text/html" id="tmpl_detail_artist" class="template">
+	<h2>
+		About <@=artist.name@>
+		<a href="#" class="close">&times;</a>
+	</h2>
+	<div class="artist-detail">
+		<div class="artist-detail-image">
+			<img src="<@=artist.photo@>">
+		</div>
+		<div class="artist-detail-description">
+			<@=artist.cleanBio@>
+		</div>
+	</div>
+</script>
+
+<script type="text/html" id="tmpl_detail_artist_rovi" class="template">
+	<h2>
+		About <@=artistName@>
+		<a href="#" class="close">&times;</a>
+	</h2>
+	<div class="artist-detail">
+		<@ if(empty){ @>
+		<div class="artist-detail-empty">
+			<h3>No data found for artist <@=artistName@></h3>
+		</div>
+		<@ }else{ @>
+		<div class="artist-detail-image">
+			<@
+			if ((albumArt) && (albumArt.artworkUrl600)) {
+			@>
+			<img src="<@=albumArt.artworkUrl600@>">
+			<@
+			}
+			for (var ii=0; ii < artistImages.length; ii++)
+			{@>
+			<img src="<@=artistImages[ii].url@>"/>
+			<@
+			if (artistImages[ii].author){
+			@>
+			<div class="attribution"><@=artistImages[ii].author@></div>
+			<@ } @>
+			<@}
+			@>
+		</div>
+		<div class="artist-detail-description">
+			<@if(artistBioOverview.text || artistBio.text || artistBioHeadline){@>
+			<h3>Bio</h3>
+			<@
+			var pText = "";
+			if (artistBioOverview.text){
+			pText = artistBioOverview.text.replace(/\[.*?\]/g, "");
+			}
+			else if (artistBio.text)
+			{
+			pText = artistBio.text.replace(/\[.*?\]/g, "");
+			}
+			else{
+			pText = artistBioHeadline.replace(/\[.*?\]/g, "");
+			}
+			@>
+			<@=pText@>
+			<@}
+			if(0 < discography.length){@>
+			<h3>Discography</h3>
+			<ul>
+				<@
+				for (var ii=0; ii < discography.length; ii++)
+				{
+				var pAlbum = discography[ii];
+				if (pAlbum.flags)
+				{
+				var toBreak = false;
+				for (var jj= 0; jj < pAlbum.flags.length; jj++)
+				{
+				if (pAlbum.flags[jj] == 'Interview') toBreak = true;
+				if (pAlbum.flags[jj] == 'Video') toBreak = true;
+				if (pAlbum.flags[jj] == 'Bootleg') toBreak = true;
+				if (toBreak) continue;
+				}
+				if (toBreak) continue;
+				}
+				@>
+				<li data-albumid="<@=pAlbum.ids.albumId@>">
+					<@=pAlbum.title@>
+					<@
+					var pYear = pAlbum.year;
+					var displayYear = false;
+					if (pYear)
+					{
+					pYear = pYear.split('-');
+					if (pYear.length)
+					{
+					pYear = parseInt(pYear[0],10);
+					if (pYear > 1800)
+					{
+					displayYear = true;
+					}
+					}
+					}
+					if (displayYear){
+					@>
+					<span style="color:#aaaaaa; font-size:0.9em"> (<@=pYear@>)</span>
+					<@ }@>
+				</li>
+				<@
+				}
+				@>
+			</ul>
+			<@}@>
+		</div>
+		<@}@>
+	</div>
+</script>
+
+<script type="text/html" id="tmpl_section_recentlyPlayedItem" class="template">
+	<li class="artist-info-trigger"
+			data-artist="<@=encodeURIComponent(artist.replace('/', '+').replace(' ', '-'))@>"
+			data-title="<@=encodeURIComponent(title.replace('/', '+').replace(' ', '-'))@>"
+			data-hasEnrichment="UNKNOWN"
+			data-performanceid="<@=id@>"
+			data-averagerating="<@=averagerating@>"
+			data-numberofreatings="<@=numberofratings@>"
+	>
+		<div class="recently-played-art">
+			<img src="<@= image @>"/>
+		</div>
+		<div class="recently-played-info">
+			<div class="recently-played-song-info">
+				<div class="recently-played-track"><@= title @></div>
+				<div class="recently-played-artist-and-album">
+					<@
+					if (artist) { @>
+					<span class="recently-played-artist"><@= artist @></span>
+					<@ }
+					if (album && ('string' == typeof album)) { @>
+					<span class="recently-played-album"><@= album @></span>
+					<@ } @>
+				</div>
+			</div>
+			<div class="date">
+				<@=friendlyTime@>
+			</div>
+		</div>
+	</li>
+</script>
+
+<script type="text/html" id="tmpl_section_recentlyPlayedItems" class="template">
+	<@
+	for (var ii=0; ii< performances.length; ii++){
+	pSong = performances[ii];
+	pSong.currentIndex = ii;
+	@>
+	<@=
+	abacastPlayer.template.render(
+	abacastPlayer.template.items.tmpl_section_recentlyPlayedItem,
+	pSong
+	)@>
+	<@ } @>
+</script>
+
+<script type="text/html" id="tmpl_section_recentlyPlayed" class="template">
+	<ul class="bound recently-played-container recently-played">
+	</ul>
+</script>
+
+<script type="text/html" id="tmpl_section_iframe" class="template">
+	<iframe seamless="seamless" width="100%" height="100%" src="<@=dataEndpoint@>"
+					sandbox="allow-top-navigation allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+</script>
+
+<script type="text/html" id="tmpl_section_podcasts" class="template">
+	<ul class="podcasts"></ul>
+</script>
+
+<script type="text/html" id="tmpl_section_playlist" class="template">
+	<ul class="playlist">
+		<@ for (var ii=0; ii< items.length; ii++){
+		var pSong = items[ii];
+		@>
+		<li class="song-playlist-trigger" data-href="<@=pSong.source@>" data-item='<@=JSON.stringify(pSong)@>'
+				data-key="<@=ii@>">
+			<@
+			if (pSong.thumbnail){
+			@>
+			<div class="playlist-art">
+				<img src="<@=pSong.thumbnail@>"/>
+			</div>
+			<@
+			}
+			@>
+			<div class="playlist-info">
+				<div class="playlist-song-info">
+					<div class="playlist-track"><@= pSong.name @></div>
+					<div class="playlist-artist-and-album">
+						<@
+						if (pSong.artist) { @>
+						<span class="playlist-artist"><@= pSong.artist @></span>
+						<@ } if (pSong.album) { @>
+						<span class="playlist-album"><@= pSong.album @></span>
+						<@ } @>
+					</div>
+				</div>
+				<div class="date">
+					<@
+					if (abacastPlayer.util.walkJson(gPlayer.options,'ads.amazon.amazonId') &&
+					abacastPlayer.util.walkJson(gPlayer.options,'ads.amazon.useBuyLinks'))
+					{
+					var pLink = abacastPlayer.util.craftAmazonPurchaseUrl(pSong.album, pSong.name, pSong.artist,
+					abacastPlayer.util.walkJson(gPlayer.options,'ads.amazon.amazonId') );
+					@>
+					<a class="buy-link" href="<@=pLink@>" target="_block">Buy from Amazon</a>
+					<@
+					}
+					@>
+				</div>
+			</div>
+			<div class="action">
+				<img src="/assets/images/play_button.png"/>
+			</div>
+		</li>
+		<@ } @>
+	</ul>
+</script>
+
+<script type="text/html" id="tmpl_ajax_podcasts" class="template"></script>
+
+<script type="text/html" id="tmpl_ajax_podcasts_delegate" class="template">
+	<@ for (var ii=0; ii< podcasts.length; ii++){ @>
+	<li class='podcast' data-key='<@=ii@>'>
+		<a href="<@=podcasts[ii].link@>" target="_blank" class="left">
+			<p class="episode-title"><@=podcasts[ii].title@></p>
+
+			<div class="dateline">
+				<@
+				var pDate = new Date(podcasts[ii].date);
+				if (!isNaN(pDate.getTime())) {
+				@>
+				<@=pDate.toLocaleDateString()@>&nbsp;<@=pDate.toLocaleTimeString("en-US", {hour:"numeric", minute:"numeric",
+				second:undefined})@>
+				<@
+				}
+				@>
+			</div>
+			<@ if (podcasts[ii].summary){ @>
+			<p class='episode-summary'><@=podcasts[ii].summary@></p>
+			<@ } @>
+		</a>
+
+		<div class="podcast-trigger right" data-href='<@= podcasts[ii].url @>'>
+			<img src="/assets/images/play_button.png"/>
+		</div>
+		<div class="clear"></div>
+	</li>
+	<@ } @>
+</script>
+
+<script type="text/html" id="tmpl_section_news" class="template">
+	<ul class="news"></ul>
+</script>
+
+<script type="text/html" id="tmpl_section_news_delegate" class="template">
+	<@ for (var ii=0; ii < newsitem.length; ii++){ @>
+	<@ if (newsitem[ii].enclosure) { @>
+	<li class="news-item has-photo">
+		<div class="recently-played-art">
+			<img src="<@= newsitem[ii].enclosure @>"/>
+		</div>
+		<@ } else { @>
+	<li class="news-item">
+		<@ } @>
+		<div class="news-container">
+			<h3><@= newsitem[ii].title @></h3>
+
+			<div class="dateline">
+				<@
+				var pDate = new Date(newsitem[ii].date);
+				if (!isNaN(pDate.getTime())) {
+				@>
+				<@=pDate.toLocaleDateString()@>&nbsp;<@=pDate.toLocaleTimeString("en-US", {hour:"numeric", minute:"numeric",
+				second:undefined})@>
+				<@
+				}
+				@>
+			</div>
+			<@ if (newsitem[ii].summary){
+			@>
+			<p><@=newsitem[ii].summary@></p>
+			<@ }
+			if("" != newsitem[ii].link){@>
+			<a class='read-more' target="_blank" href="<@=newsitem[ii].link@>">More<i class="icon-angle-right"></i></a>
+			<@}@>
+		</div>
+	</li>
+	<@ } @>
+</script>
+
+<script type="text/html" id="tmpl_section_photos" class="template">
+	<ul class="photos"></ul>
+</script>
+
+<script type="text/html" id="tmpl_section_photos_delegate" class="template">
+	<@ for (var ii=0; ii < newsitem.length; ii++){
+	var pLink = newsitem[ii].enclosure ? newsitem[ii].enclosure : newsitem[ii].link;
+	@>
+	<li class="photo-item">
+		<img src="<@= pLink @>"/>
+	</li>
+	<@ } @>
+</script>
+
+<script type="text/html" id="tmpl_section_stations" class="template">
+	<ul class="other-stations">
+		<@for(var idx in items){ @>
+		<li>
+			<a data-href="<@=items[idx].url@>">
+				<div class="left">
+					<img class="station_logo" src="<@=items[idx].logo@>"/>
+				</div>
+				<div class="right">
+					<p class="label"><@=items[idx].station_label@></p>
+					<@ if("" != items[idx].market){ @>
+					<p class="meta market"><@=items[idx].market@></p>
+					<@}@>
+					<@ if("" != items[idx].genre){ @>
+					<p class="meta genre"><@=items[idx].genre@></p>
+					<@}@>
+					<@ if("" != items[idx].description){ @>
+					<p class="meta desc"><@=items[idx].description@></p>
+					<@}@>
+					<p class="meta code"><@=items[idx].station_code@></p>
+				</div>
+				<div class="clear"></div>
+			</a>
+		</li>
+		<@}@>
+	</ul>
+</script>
+
+<script type="text/html" id="tmpl_section_linklist" class="template">
+	<ul class="extra-links">
+		<@ for (var ii=0; ii < sources.length; ii++){ @>
+		<li><a href='<@=sources[ii].url@>' target="_blank"><@=sources[ii].label@></a></li>
+		<@ } @>
+	</ul>
+</script>
+
+<script type="text/html" id="tmpl_section_comment" class="template">
+	<div style="padding:12px;">
+		<@=(text) ? text : 'Send us your comment or question.' @>
+	</div>
+	<br/>
+	<form name="comment-submit" class="comment-submit" action="<@=post_url@>">
+		<input type='hidden' value="<@=sid@>" name="stationid"/>
+		<input type='hidden' value="<@=to@>" name="to"/>
+		<input placeholder='Your name' type='text' name="name"/>
+		<input placeholder='Your email address' type='text' name="email"/>
+		<select name="comment_type">
+			<option value="" selected disabled class="placeholder">Select a Type</option>
+			<option value="comment">Comment</option>
+			<option value="request">Request</option>
+			<option value="problem">Problem</option>
+		</select>
+		<textarea placeholder="<@=(defaultText) ? defaultText : 'Enter your comment here.' @>" name="message"></textarea>
+		<img src="/assets/images/loading.gif" class="loading"/>
+		<input type='submit'/>
+	</form>
+</script>
+
+<script type="text/html" id="tmpl_navigation" class="template">
+	<ul>
+		<@ for (var ii=0; ii< items.length; ii++){ @>
+		<@ if('nowPlaying' == items[ii].type){ @>
+		<li><a class="anchor-section-link" href="#<@=abacastPlayer.util.cleanId(items[ii].uniqueid)@>"
+					 nav="#<@=abacastPlayer.util.cleanId(items[ii].uniqueid)@>"><@=items[ii].name@></a></li>
+		<@}else{@>
+		<li><a class="section-link" href="#<@=abacastPlayer.util.cleanId(items[ii].uniqueid)@>"
+					 nav="#<@=abacastPlayer.util.cleanId(items[ii].uniqueid)@>"><@=items[ii].name@></a></li>
+		<@ }
+		} @>
+	</ul>
+</script>
+
+<script type="text/html" id="tmpl_colorfx" class="template">
+	.standard-background { background-color:rgb(<@=color@>); }
+	.alpha-fade-desktop {
+		background-image: linear-gradient( to left, rgba(<@=color@>,255), rgba(<@=color@>,0));
+		background-image: -moz-linear-gradient(right, rgba(<@=color@>,255), rgba(<@=color@>,0));
+		background-image: -webkit-linear-gradient(right, rgba(<@=color@>,255), rgba(<@=color@>,0));
+	}
+	.alpha-fade-mobile {
+		background-image: linear-gradient( to top, rgba(<@=color@>,255), rgba(<@=color@>,0));
+		background-image: -moz-linear-gradient(bottom, rgba(<@=color@>,255), rgba(<@=color@>,0));
+		background-image: -webkit-linear-gradient(bottom, rgba(<@=color@>,255), rgba(<@=color@>,0));
+	}
+</script>
+</head>
+
+<body class='is-loading'>
+			<div id="fb-root"></div>
+	
+		<audio id="podcast-audio"></audio>
+	<audio id="still-there-audio"></audio>
+	<div class="bound audioplayer">
+		<audio id="main-player"></audio>
+	</div>
+
+	<div class="loading-indicator main">
+		<div class='spinner one'></div>
+		<div class='spinner two'></div>
+		<div class='spinner three'></div>
+	</div>
+
+	<div class="standard-background background"></div>
+	<div class="mobile-menu">
+		<div class="mobile-menu-top">
+			<ul class="mobile-controls"></ul>
+			<a class="help" href="/help.php" target="_blank">Help</a>
+			<nav class="navigation bound"></nav>
+		</div>
+	</div>
+
+	<div class="mobile-menu-trigger">
+		<a href="#" class='show-menu icon-reorder'></a>
+	</div>
+
+	<div class="left-bar">
+		<div class='station-logo-wrap'>
+			<div class="station-logo"></div>
+							<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/"
+					data-width="150" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+						<a class="help" href="/help.php" target="_blank">Help</a>
+			<div class="clear"></div>
+		</div>
+		<a href='#' class="reveal-navigation-trigger">
+			Show Menu		</a>
+		<nav class="navigation bound"></nav>
+		<div class="ad-container">
+			<div class="main-ad-container size-300x250"></div>
+		</div>
+
+		<div class="controls-and-info podcast-controls vertical">
+			<div class="controls">
+				<button type='button' class='play-button circle-button icon-off'></button>
+				<ul class="button-flower has-3-buttons">
+					<li class='skip-back'>
+						<button type='button' class='icon-backward circle-button'></button>
+					</li>
+					<li class='volume'>
+						<button type='button' class='icon-volume-high circle-button'></button>
+						<div class="volume-slider">
+							<div class="volume-slider-inner"></div>
+						</div>
+					</li>
+					<li class='skip-ahead'>
+						<button type='button' class='icon-forward circle-button'></button>
+					</li>
+				</ul>
+			</div>
+			<div class="podcast-info">
+				<div class='now-playing-episode'>
+					<h2 class="bound current-episode"></h2>
+				</div>
+				<div class='now-playing-podcast'>
+					<h3  class="bound current-podcast"></h3>
+				</div>
+			</div>
+			<div class="seek-bar">
+				<div class="time-total">00:00</div>
+				<div class="time-remaining">00:00</div>
+				<div class="seek-bar-inner">
+					<div class="seek-bar-fill" style='width: 0%'></div>
+				</div>
+			</div>
+			<button href="#" class="back-to-live">
+				Back to Live			</button>
+		</div>
+
+		<div class="controls-and-info radio-controls vertical">
+			<div class="controls">
+				<div class="rating-label require require-music">
+					<span class="icon-vote-percentage"></span>%<span class="icon-thumbs-up"></span>
+				</div>
+				<a href="#" target='blank' class="action-buy-link require require-music buy-link-controls" target="_blank">
+					Buy				</a>
+				<button type='button' class='play-button circle-button icon-off'></button>
+				<ul class="button-flower"></ul>
+			</div>
+			<div class="song-info">
+				<div class='now-playing-track'>
+					<h2 class="bound current-track"></h2>
+				</div>
+				<div class="now-playing-line-2">
+					<div class='now-playing-artist'>
+						<h3  class="bound current-artist"></h3>
+					</div>
+					<div class='now-playing-album'>
+						<h3 class="bound current-album"></h3>
+					</div>
+				</div>
+			</div>
+			<div class="logo"><a href="http://kdlmradio.com/" target="_blank"><img src=""/></a></div>
+		</div>
+	</div>
+
+	<div class="album-art loading-overlay" style="z-index: 99;">
+		<div class="loading-indicator artist-detail-loading">
+			<div class='spinner one'></div>
+			<div class='spinner two'></div>
+			<div class='spinner three'></div>
+		</div>
+	</div>
+	<div class="album-art program-art background-bound">
+		<div class="alpha-fade-desktop"></div>
+		<div class="alpha-fade-mobile"></div>
+	</div>
+
+	<div class="album-art current-albumart background-bound">
+		<div class="alpha-fade-desktop"></div>
+		<div class="alpha-fade-mobile"></div>
+	</div>
+
+	<div class="podcast-art">
+		<div class="alpha-fade-desktop"></div>
+		<div class="alpha-fade-mobile"></div>
+	</div>
+
+	<div class="main-ad-container-mobile size-300x250"></div>
+	<div class="main-ad-container-short-screen size-300x250"></div>
+	<div class="mobile-radio-init">
+		<div class="play">
+			<img src="/assets/images/play_button2.png" />
+		</div>
+		<div class="loading">
+			<img src="/assets/images/loading.gif" />
+			<p>Loading, please wait...</p>
+		</div>
+	</div>
+
+	<div class="banner-container">
+		<div class="banner"></div>
+	</div>
+
+	<div class="gateway-container">
+		<div class="content">
+			<div class="content-inner">
+								<div class="gateway-media-container"></div>
+				<div class="gateway-banner-container"></div>
+				<div class="timer-area" style="display: none;">
+					Your stream will begin in					<span class="media-time-left">-</span>s
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="mobile-podcast-controls">
+		<div class="seek-bar">
+			<div class="time-total">58:32</div>
+			<div class="time-remaining">20:33</div>
+			<div class="seek-bar-inner">
+				<div class="seek-bar-fill" style="width: 66%;"></div>
+			</div>
+		</div>
+	</div>
+
+	<section id="track" class="bound sections"></section>
+	<div class='dialog-container'>
+		<div class="dialog">
+			<h2 class='dialog-title'></h2>
+			<p class='dialog-message'></p>
+			<div class="button-row">
+				<button type="button">OK</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts: Start Player //-->
+	<script>
+		$(function() {
+			$(abaRadio.featureDetection).on('initialized', function() {
+				gPlayer = new abacastPlayer({"text":{"GATEWAY_STREAM_BEGIN":"Your stream will begin in","CURRENT_TRACK_BUY_LIST":"Buy","BACK_TO_LIVE":"Back to Live","NAVIGATION_SHOW_MENU":"Show Menu","MOBILE_BUY_ON_AMAZON":"Buy on Amazon"},"presslaff_text":{"TITLE":"Please Register","DESCRIPTION":"Please answer the brief questions below to start listening.","FIELD_1_LABEL":"Email","FIELD_1_NAME":"email","FIELD_2_LABEL":"First Name","FIELD_2_NAME":"first_name","FIELD_3_LABEL":"Zip Code","FIELD_3_NAME":"zip_code","TEXT_MALE":"Male","TEXT_FEMALE":"Female","HTML_CONFIRM":"Allow <span class=\"station-updates-name\"><\/span> to send you email updates.","FORM_SUBMIT":"Submit"},"data":{"nowPlaying":"http:\/\/api.nowplaying.abacast.net\/prt\/nowplaying\/2\/","enrichment":"http:\/\/d2ybyaxt0fuzrp.cloudfront.net\/music\/combined","player_endpoint":"http:\/\/v6player-1.elasticbeanstalk.com\/","proxy":"\/simpleproxy.php?url=","audioFlash":"http:\/\/icy1.abacast.com\/leighton-kdlmamaac-64.m3u?type=.flv&source=v6player","audioHtml":"http:\/\/icy1.abacast.com\/leighton-kdlmammp3-64.m3u?source=v6player","pubnubSubscribeKey":"sub-c-8d6f4628-b374-11e3-aab4-02ee2ddab7fe","vote":"http:\/\/thetomcatsupremacy-prod.elasticbeanstalk.com\/prt\/performance_rate","stream_id":"4231"},"station":{"link":"\/\/v6player.wostreaming.net\/6755","title":"","sid":"6755","logo":"http:\/\/d31wsou9chh9ss.cloudfront.net\/0\/mobile\/images\/1512596543\/14522\/300\/200\/PlayerLogo.jpg","logoLink":"http:\/\/kdlmradio.com\/","code":"KDLM-AM","name":"KDLM"},"ui":{"recentlyPlayedMax":10,"scheme":"Dark","background":"http:\/\/d31wsou9chh9ss.cloudfront.net\/0\/mobile\/images\/1512676951\/14530\/900\/900\/PlayerBackground.jpg","defaultAlbumArt":"http:\/\/d31wsou9chh9ss.cloudfront.net\/0\/mobile\/images\/1512596284\/14521\/900\/900\/PlayerDefaultAlbumArt.jpg","defaultProgram":"","maxConnect":"90","maxConnectAudio":"","disableAlbumArt":false,"flower":[{"type":"Volume"},{"type":"Facebook"},{"type":"Email"},{"type":"Twitter"}],"extraCss":"","extraJs":"","toggleMetadata":"1"},"ads":{"a2x":{"enabled":false,"user_reg_url":"http:\/\/playerservices.live.streamtheworld.com\/api\/getuuid?redir=","sync_service_url":"http:\/\/sync.abacast.net"},"admeta":{"enabled":false,"user_match_url":"http:\/\/p@PBID@.atemda.com\/jsonusermatch.ashx","publisher_id":"287","placement_id":""},"banner_proxy_hosts":["http:\/\/clarity.banner.s3.amazonaws.com","http:\/\/clarity.qa.banner.s3.amazonaws.com","cloudfront.net"],"gateway":{"url":"http:\/\/api.clarity.abacast.com\/gateway\/getmediav6.php?sid=6755","proxy":null},"banner":{"url":"http:\/\/api.clarity.abacast.com\/banner\/rotator.php?sc=KDLM-AM&w=728&h=90&r=0","frequency":"0","layout":"728x90"},"amazon":{"useBuyLinks":true,"amazonId":""}},"tracking":{"google":{"enabled":false,"gacode":""},"piwik":{"enabled":false,"domains":"","siteid":""},"quantcast":{"enabled":false,"label":"","pcode":""},"nielsen":{"enabled":false,"appid":"","sfcode":"uat-cert"}},"social":{"facebook":{"appId":"142428785927889","postMask":"Currently listening to {{media_song}} by {{media_artist}} on {{station}} at {{player_link}}.","logo":""},"twitter":{"postMask":"Currently listening to {{media_song}} by {{media_artist}} on {{station}} at {{player_link}}."},"email":{"subjectMask":"Currently listening to {{media_song}} by {{media_artist}} on {{station}} at {{player_link}}.","bodyMask":"{{player_link}}"}},"menuitems":[{"type":"nowPlaying","name":"Now Playing"}]});
+				$('body').trigger('process_player_events');
+			});
+			abaRadio.featureDetection.initialize();
+		});
+	</script>
+
+	<!-- Scripts: Player Events //-->
+	<script src="/assets/js/player-events.js?cb=49"></script>
+<!-- Google Analytics Tag: WOS -->
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-28606700-2', 'auto');
+	ga('send', 'pageview');
+</script>
+<!-- End Google Analytics Tag: WOS -->
+<!-- Lotame BT collection tag //-->
+<script src="http://tags.crwdcntrl.net/c/6394/cc_af.js"></script>
+</body>
+</html>
